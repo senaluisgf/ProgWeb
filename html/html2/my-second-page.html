@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>Instituto de Computação</title>
+</head>
+<body>
+  <h1>Formulário de Contato</h1>
+  <fieldset>
+    <legend>Dados Básicos</legend>
+    <label for="name">Nome</label>
+    <input type="text" id="name">
+    <label for="email">E-mail</label>
+    <input type="email" id="email" placeholder="seunome@dominio.com.br">
+    <label for="web">Website</label>
+    <input type="text" id="web" value="http://">
+  </fieldset>
+  
+  <fieldset>
+    <legend>Seu curso no Instituto de Computação</legend>
+    <label for="course1">Ciência da Computação</label>
+    <input type="radio" id="course1">
+    <label for="course2">Sistemas de Informação</label>
+    <input type="radio" id="course2">
+    <label for="course3">Engenharia de Computação</label>
+    <input type="radio" id="course3">
+  </fieldset>
+
+  <fieldset>
+    <legend>Assinale as linguagens já usadas por você:</legend>
+    <label for="language1">Java</label>
+    <input type="checkbox" id="language1">
+    <label for="language2">C</label>
+    <input type="checkbox" id="language2">
+    <label for="language3">C++</label>
+    <input type="checkbox" id="language3">
+    <label for="language4">Perl</label>
+    <input type="checkbox" id="language4">
+    <label for="language5">Python</label>
+    <input type="checkbox" id="language5">
+    <label for="language6">Javascript</label>
+    <input type="checkbox" id="language6">
+  </fieldset>
+
+  <fieldset>
+    <legend>Dados Complementares</legend>
+    <label for="color">Cor favorita</label>
+    <input type="color" id="color">
+    <label for="birth">Data de nascimento</label>
+    <input type="date" id="birth">
+    <label for="year">Ano de entrada em seu curso do Icomp</label>
+    <input type="text" id="year">
+    <label for="rank">Nota para este site</label>
+    <input type="range" id="rank">
+  </fieldset>
+
+  <fieldset>
+    <legend>Área de atuação</legend>
+    <select>
+      <option value="1">Banco de Dados</option>
+      <option value="2">Educação a Distância</option>
+      <option value="3">Engenharia de Software</option>
+      <option value="4">Otimização</option>
+      <option value="5">Programação de Informação</option>
+      <option value="6">Recuperação de Informação</option>
+      <option value="7">Redes de Computadores</option>
+    </select>
+  </fieldset>
+
+  <fieldset>
+    <legend>Submeta seu currículo vitae</legend>
+    <input type="file" name="file" id="file">
+  </fieldset>
+
+  <fieldset>
+    <legend>Escreva sua mensagem</legend>
+    <textarea name="observation" id="observation" cols="30" rows="10" placeholder="Este é o valor padrão!"></textarea>
+  </fieldset>
+
+  <input type="button" value="Resetar Dados">
+  <input type="button" value="Enviar Mensagem">
+</body>
