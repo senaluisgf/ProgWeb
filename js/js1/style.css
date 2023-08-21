@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  justify-content: space-around;
+}
+
+table {
+  text-align: center;
+  min-width: 100px;
+}
