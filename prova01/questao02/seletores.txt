@@ -1,0 +1,6 @@
+seletores:
+1 - seria usando a própria tag span:
+  span {}
+
+2 - seria combinando as tags p e span:
+  p span {}
