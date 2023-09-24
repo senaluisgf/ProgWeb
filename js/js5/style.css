@@ -1,0 +1,21 @@
+/* input {
+  max-width: 100px;
+} */
+.input-barras {
+  display: flex;
+  gap: 3px
+}
+.input-barras input {
+  width: 80px;
+}
+.result {
+  display: flex;
+  align-items: end;
+}
+
+.graph {
+  width: 10;
+  height: 10;
+  background-color: red;
+  margin: 5px;
+}

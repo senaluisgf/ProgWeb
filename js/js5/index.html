@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <title>IComp/UFAM</title>
+</head>
+<body>
+  <h1>Um Gráfico de Barras</h1>
+  <form name="myForm">
+    <div style="display: flex; gap: 10px;">
+      <label>Informe a altura das barras:</label>
+      <div class="input-barras">
+        <input type="number" id="input1">
+        <input type="number" id="input2">
+        <input type="number" id="input3">
+        <input type="number" id="input4">
+        <input type="number" id="input5">
+      </div>
+    </div>
+
+    <div>
+      <label for="largura">Informe a largura das barras:</label>
+      <input type="number" id="largura">
+    </div>
+
+    <input type="button" value="Desenhar o gráfico" onclick="printGraph()">
+  </form>
+  <div class="result">
+    <div class="graph" id="barra1"></div>
+    <div class="graph" id="barra2"></div>
+    <div class="graph" id="barra3"></div>
+    <div class="graph" id="barra4"></div>
+    <div class="graph" id="barra5"></div>
+  </div>
+</body>
+</html>
