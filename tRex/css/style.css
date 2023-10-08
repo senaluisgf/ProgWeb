@@ -1,7 +1,48 @@
+#game {
+  width: 1024px;
+  height: 302px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1500px) {
+  #game {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.over{
+  background-image: url(../img/sprite.png);
+  background-position:-970px -21px;
+  position: absolute;
+  width: 286px;
+  height: 18px;
+
+  margin: auto;
+  z-index: 3;
+  display: none;
+}
+
+.restart {
+  background-image: url(../img/sprite.png);
+  background-position: -3px -3px;
+  position: absolute;
+  height: 46px;
+  width: 51px;
+  top: 210px;
+  margin: auto;
+  z-index: 3;
+  display: none;
+}
+
+
 .deserto {
   border: 1px solid black;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; 
   z-index: 1;
 }
 
@@ -9,6 +50,7 @@
   background-image: url(../img/sprite.png);
   position: absolute;
   bottom: 0px;
+
   background-position-y: -78px;
   width: 1831px;
   height: 20px;
@@ -31,4 +73,53 @@
   width: 70px;
   height: 20px;
   z-index: 2;
+}
+
+.cactus {
+  background-image: url(../img/sprite.png);
+  position: absolute;
+  z-index: 3;
+}
+
+.cactus.pequeno{
+  position: absolute;
+  width: 25px;
+  height: 60px;
+}
+
+.cactus.grande{
+  position: absolute;
+  width: 35px;
+  height: 84px;
+}
+
+.pterodactilo {
+  background-image: url(../img/sprite.png);
+  position: absolute;
+  width: 67px;
+  height: 48px;
+  z-index: 3;
+}
+.pontuacao {
+  right: 10px;
+  top: 0px;
+  width: 76px;
+  height: 18px;
+  position: absolute;
+  display: inline-flex;
+  z-index: 12;
+}
+
+.digito {
+  width: 15px;
+  height: 18px;
+  background-image: url(../img/sprite.png);
+  position: relative;
+}
+
+.endgame {
+  align-items: center;
+  position: absolute;
+  top: 70px;
+  right: 1160px;
 }
