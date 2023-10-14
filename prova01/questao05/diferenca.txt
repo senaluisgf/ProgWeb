@@ -1,1 +1,6 @@
-a diferença entre == e === em javascript é que o == irá considerar apenas se o valor das variáveis são iguais, enquanto o === compara também o tipo das variáveis em questão
+Explicação correta
+Nota: 2.0
+
+a diferença entre == e === em javascript é que o == irá considerar
+ apenas se o valor das variáveis são iguais, enquanto o === compara 
+ também o tipo das variáveis em questão
