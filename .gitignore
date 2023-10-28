@@ -1,2 +1,2 @@
 //ignorando node_modules
-Game/node_modules
+Game/node_modules/*
