@@ -1,9 +1,17 @@
 import express from 'express';
-import logs from './middlewares/logs';
-import router from './router/router';
+import { engine } from 'express-handlebars';
+
+import logs from './src/middlewares/logs';
+import router from './src/router/router';
 
 const app = express()
-const PORT = 3001
+const PORT = 3000
+
+app.engine('handlebars', engine({
+  helpers: require(`${__dirname}/src/views/helpers/helpers`)
+}));
+app.set('view engine', 'handlebars');
+app.set('views', `src/views`);
 
 app.use(logs('simples'));
 

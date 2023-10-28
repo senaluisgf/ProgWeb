@@ -1,14 +1,10 @@
 import express from 'express';
+import mainController from '../contollers/main';
 import userController from '../contollers/user';
 const router = express.Router()
 
-router.get('/', (req, res) => {
-  res.send('Home Page')
-});
-
-router.get('/about', (req, res) => {
-  res.send('About')
-});
+router.get('/', mainController.index)
+router.get('/about', mainController.about)
 
 router.get('/users', userController.index);
 
