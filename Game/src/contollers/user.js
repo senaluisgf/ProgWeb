@@ -7,7 +7,6 @@ const users = [
 const index = (req, res) => {
   res.render('users', {
     users,
-    layout: false
   });
 }
 

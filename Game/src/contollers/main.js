@@ -1,9 +1,9 @@
 const index = (req, res) => {
-  res.render('main/index', {layout: false});
+  res.render('main/index');
 }
 
 const about = (req, res) => {
-  res.render('main/about', { layout: false });
+  res.render('main/about');
 }
 
 export default { index, about };

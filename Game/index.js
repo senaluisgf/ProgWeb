@@ -8,7 +8,9 @@ const app = express()
 const PORT = 3000
 
 app.engine('handlebars', engine({
-  helpers: require(`${__dirname}/src/views/helpers/helpers`)
+  helpers: require(`${__dirname}/src/views/helpers/helpers`),
+  layoutsDir: `${__dirname}/src/views/layouts`,
+  defaultLayout: 'main',
 }));
 app.set('view engine', 'handlebars');
 app.set('views', `src/views`);
