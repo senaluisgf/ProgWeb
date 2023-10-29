@@ -11,10 +11,14 @@
   "author": "Luis Sena",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "bootstrap": "^5.3.2",
     "esm": "^3.2.25",
     "express": "^4.18.2",
     "express-handlebars": "^6.0.6",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "node-sass-middleware": "^1.1.0",
+    "sass": "^1.69.5"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"

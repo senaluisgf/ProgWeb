@@ -1,4 +1,4 @@
-import morgan from 'morgan'
+const morgan = require('morgan')
 function logs(tipo) {
   if(tipo === 'simples') {
     return morgan('short')

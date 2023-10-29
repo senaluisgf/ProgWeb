@@ -1,5 +1,6 @@
 import express from 'express';
 import { engine } from 'express-handlebars';
+import sass from 'node-sass-middleware';
 
 import logs from './src/middlewares/logs';
 import router from './src/router/router';
@@ -16,6 +17,21 @@ app.set('view engine', 'handlebars');
 app.set('views', `src/views`);
 
 app.use(logs('simples'));
+
+app.use(sass({
+  src: `${__dirname}/public/scss`,
+  dest: `${__dirname}/public/css`,
+  outputStyle: "compressed",
+  prefix: '/css'
+}));
+
+app.use('/img', express.static(`${__dirname}/public/img`));
+app.use('/css', express.static(`${__dirname}/public/css`));
+app.use('/webfonts', express.static(`${__dirname}/node_modules/@fortawesome/fontawesome-free/webfonts`));
+app.use('/js', [
+  express.static(`${__dirname}/public/js`),
+  express.static(`${__dirname}/node_modules/bootstrap/dist/js`)
+]);
 
 app.use(router)
 
