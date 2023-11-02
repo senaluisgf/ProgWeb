@@ -1,4 +1,4 @@
-import Courses from '../services/course';
+import Courses from '../repositories/course';
 
 const index = async (req, res) => {
   const courses = await Courses.findAll();

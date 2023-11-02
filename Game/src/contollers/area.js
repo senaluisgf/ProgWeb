@@ -1,4 +1,4 @@
-import Areas from '../services/area';
+import Areas from '../repositories/area';
 // import { Areas } from '../models/index';
 
 const index = async (req, res) => {
