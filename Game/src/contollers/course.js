@@ -1,18 +1,27 @@
-const create = (req, res) => {
-  if(req.route.methods.get) {
-    res.render('courses/create');
-  } else {
-    res.send('Salvou')
-  }
-}
+import Courses from '../services/course';
 
-const getOne = (req, res) => {
-  res.render('courses/show', {
-    name: 'Ciência da Computação',
-    sigla: 'IE07',
-    description: 'Ementa do curso',
-    area: 'Ciências Exatas'
+const index = async (req, res) => {
+  const courses = await Courses.findAll();
+  res.render('courses', {
+    courses: courses
   })
 }
 
-export default { create, getOne }
+const create = async (req, res) => {
+  if(req.route.methods.get) {
+    res.render('courses/create');
+  } else {
+    const { body } = req;
+    console.log({body})
+    await Courses.create(body);
+    res.render("courses/");
+  }
+}
+
+const getOne = async (req, res) => {
+  const { id } = req.params;
+  const course = await Courses.findOne(parseInt(id))
+  res.render('courses/show', course)
+}
+
+export default { index, create, getOne }

@@ -14,6 +14,7 @@ router.get('/game', dinoController.index);
 
 router.get('/area', areaController.index);
 
+router.get('/cursos', courseController.index);
 router.get('/curso/create', courseController.create);
 router.get('/curso/:id', courseController.getOne);
 
