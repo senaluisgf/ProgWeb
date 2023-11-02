@@ -26,7 +26,7 @@ const update = async (req, res) => {
     const { id } = req.params
     const { body } = req;
     await Courses.update(parseInt(id), body);
-    res.redirect('/curso');
+    res.redirect('/curso/'+id);
   }
 }
 
