@@ -1,4 +1,4 @@
-import Courses from '../services/course';
+import { default as Courses } from '../services/course';
 
 const index = async (req, res) => {
   const courses = await Courses.findAll();
@@ -12,9 +12,8 @@ const create = async (req, res) => {
     res.render('courses/create');
   } else {
     const { body } = req;
-    console.log({body})
-    await Courses.create(body);
-    res.render("courses/");
+    const courses = await Courses.create(body);
+    res.redirect('/cursos');
   }
 }
 

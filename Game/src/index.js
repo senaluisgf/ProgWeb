@@ -40,6 +40,8 @@ app.use('/js', [
   express.static(`${__dirname}/../../tRex/js`),
 ]);
 
+app.use(express.urlencoded({extended: false}))
+
 app.use(router)
 
 app.listen(PORT, () => {

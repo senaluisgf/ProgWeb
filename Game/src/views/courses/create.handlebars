@@ -1,32 +1,31 @@
-  <h1>Adicionar Curso</h1>
   <form action="/curso/create" method="POST">
     <div class="form-group">
       <label class="col-form-label mt-4" for="sigla">Sigla</label>
-      <input type="text" class="form-control" placeholder="exemplo: IE08" id="sigla">
+      <input type="text" class="form-control" placeholder="exemplo: IE08" id="sigla" name="cod">
     </div>
     
     <div class="form-group">
       <label class="col-form-label mt-4" for="input-name">Nome</label>
-      <input type="text" class="form-control" placeholder="exemplo: Ciência da Computação" id="input-name">
+      <input type="text" class="form-control" placeholder="exemplo: Ciência da Computação" id="input-name" name="name">
     </div>
     
     <div class="form-group">
       <label for="exampleTextarea" class="form-label mt-4">Descrição</label>
-      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+      <textarea class="form-control" id="exampleTextarea" rows="3" name="description"></textarea>
     </div>
 
     <fieldset class="form-group">
       <legend class="mt-4">Área do Conhecimento</legend>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        <input class="form-check-input" type="radio" name="areaId" id="optionsRadios1" value="1" checked>
         <label class="form-check-label" for="optionsRadios1">Ciências Exatas - Computação, engenharias, matemática, estatística, etc.</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+        <input class="form-check-input" type="radio" name="areaId" id="optionsRadios2" value="2">
         <label class="form-check-label" for="optionsRadios2">Ciências Humanas - Letras, psicologia, história, geografia, etc.</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+        <input class="form-check-input" type="radio" name="areaId" id="optionsRadios3" value="3">
         <label class="form-check-label" for="optionsRadios3">Ciências Biológicas - medicina, odontologia, biologia, agrária, etc.</label>
       </div>
 
@@ -35,3 +34,4 @@
       </div>
     </fieldset>
   </form>
+  <script src="/js/bootstrap.bundle.min.js"></script>

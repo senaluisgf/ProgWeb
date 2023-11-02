@@ -16,6 +16,7 @@ router.get('/area', areaController.index);
 
 router.get('/cursos', courseController.index);
 router.get('/curso/create', courseController.create);
+router.post('/curso/create', courseController.create);
 router.get('/curso/:id', courseController.getOne);
 
 router.get('/users', userController.index);

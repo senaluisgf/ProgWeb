@@ -1,8 +1,8 @@
 import Areas from './area';
 
 const courses = [
-  {id: 1, cod: "IE07", name: "Ciencia da Computação", areaId: 1, description: 'ementa do curso'},
-  {id: 2, cod: "IE08", name: "Engenharia da Computação", areaId: 3, description: 'ementa do curso'}
+//   {id: 1, cod: "IE07", name: "Ciencia da Computação", areaId: 1, description: 'ementa do curso'},
+//   {id: 2, cod: "IE08", name: "Engenharia da Computação", areaId: 3, description: 'ementa do curso'}
 ]
 let count = courses.length
 
@@ -33,11 +33,12 @@ async function create(body) {
     id: count + 1,
     name: body.name,
     areaId: body.areaId,
+    cod: body.cod,
     description: body.description,
   }
   count++
   await courses.push(course);
-  return findOne(course.id);
+  return courses;
 }
 
 export default { findAll, findOne, create }
