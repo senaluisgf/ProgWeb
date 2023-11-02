@@ -14,10 +14,14 @@ router.get('/game', dinoController.index);
 
 router.get('/area', areaController.index);
 
-router.get('/cursos', courseController.index);
+router.get('/curso', courseController.index);
 router.get('/curso/create', courseController.create);
 router.post('/curso/create', courseController.create);
+
 router.get('/curso/:id', courseController.getOne);
+router.get('/curso/:id/update', courseController.update);
+router.post('/curso/:id/update', courseController.update);
+router.get('/curso/:id/delete', courseController.remove)
 
 router.get('/users', userController.index);
 

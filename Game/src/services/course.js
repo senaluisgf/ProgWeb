@@ -1,6 +1,6 @@
 import Areas from './area';
 
-const courses = [
+let courses = [
 //   {id: 1, cod: "IE07", name: "Ciencia da Computação", areaId: 1, description: 'ementa do curso'},
 //   {id: 2, cod: "IE08", name: "Engenharia da Computação", areaId: 3, description: 'ementa do curso'}
 ]
@@ -38,7 +38,26 @@ async function create(body) {
   }
   count++
   await courses.push(course);
-  return courses;
 }
 
-export default { findAll, findOne, create }
+async function update(id, body) {
+  courses = courses.map(course => {
+    if(course.id === id) {
+      return {
+        id: id,
+        name: body.name,
+        areaId: body.areaId,
+        cod: body.cod,
+        description: body.description,
+      }
+    } else{
+      return course;
+    }
+  })
+}
+
+async function remove(id) {
+  courses = courses.filter(c => id!==c.id)
+}
+
+export default { findAll, findOne, create, update, remove }
